@@ -1,0 +1,35 @@
+﻿using FamilyHubs.ReferralService.Shared.Dto;
+
+namespace FamilyHubs.ReferralService.Shared.Tests;
+
+public class ReferralServiceComparerTests : DtoComparerTestBase<ReferralServiceDto, string>
+{
+    public ReferralServiceComparerTests() : base(new ReferralServiceDto
+    {
+        Id = 1,
+        Name = "Organisation",
+        Description = "Service Description",
+        ReferralOrganisationDto = new ReferralOrganisationDto
+        {
+            Id = 1,
+            Name = "Organisation",
+            Description = "Organisation Description",
+        }
+
+    }, new ReferralServiceDto
+    {
+        Id = 1,
+        Name = "Organisation",
+        Description = "Service Description",
+        ReferralOrganisationDto = new ReferralOrganisationDto
+        {
+            Id = 1,
+            Name = "Organisation",
+            Description = "Organisation Description",
+        }
+
+    }, dto => dto.Name)
+    {
+
+    }
+}
