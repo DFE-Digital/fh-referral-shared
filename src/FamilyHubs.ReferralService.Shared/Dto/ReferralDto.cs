@@ -9,6 +9,8 @@ public record ReferralDto : DtoBase<long>
     public required RecipientDto RecipientDto { get; set; }
     public required ReferrerDto ReferrerDto { get; set; }
     public required ReferralServiceDto ReferralServiceDto { get; set; }
+    public DateTime? Created { get; set; }
+    public DateTime? LastModified { get; set; }
     public ICollection<ReferralStatusDto> Status { get; set; } = new List<ReferralStatusDto>();
 
     public override int GetHashCode()
