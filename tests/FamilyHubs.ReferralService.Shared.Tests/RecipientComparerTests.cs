@@ -18,7 +18,7 @@ public class RecipientComparerTests : DtoComparerTestBase<RecipientDto, string>
         PostCode = "B30 2TV"
     }, new RecipientDto
     {
-        Id = 1,
+        Id = 2,
         Name = "Joe Blogs",
         Email = "JoeBlog@email.com",
         Telephone = "078123456",

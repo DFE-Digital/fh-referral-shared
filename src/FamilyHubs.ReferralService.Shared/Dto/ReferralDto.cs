@@ -9,15 +9,21 @@ public record ReferralDto : DtoBase<long>
     public required RecipientDto RecipientDto { get; set; }
     public required ReferrerDto ReferrerDto { get; set; }
     public required ReferralServiceDto ReferralServiceDto { get; set; }
+    public string? ReasonForDecliningSupport { get; set; }
     public DateTime? Created { get; set; }
     public DateTime? LastModified { get; set; }
     public ICollection<ReferralStatusDto> Status { get; set; } = new List<ReferralStatusDto>();
 
     public override int GetHashCode()
     {
-        return
+        var result =
            EqualityComparer<string?>.Default.GetHashCode(ReasonForSupport) * -1521134295 +
            EqualityComparer<string?>.Default.GetHashCode(EngageWithFamily) * -1521134295;
+
+        if (!string.IsNullOrEmpty(ReasonForDecliningSupport))
+            result += EqualityComparer<string>.Default.GetHashCode(ReasonForDecliningSupport);
+
+        return result;
     }
 
     public virtual bool Equals(ReferralDto? other)
@@ -29,6 +35,7 @@ public record ReferralDto : DtoBase<long>
 
         return
             EqualityComparer<string>.Default.Equals(ReasonForSupport, other.ReasonForSupport) &&
-            EqualityComparer<string>.Default.Equals(EngageWithFamily, other.EngageWithFamily);
+            EqualityComparer<string>.Default.Equals(EngageWithFamily, other.EngageWithFamily) &&
+            EqualityComparer<string>.Default.Equals(ReasonForDecliningSupport, other.ReasonForDecliningSupport);
     }
 }
