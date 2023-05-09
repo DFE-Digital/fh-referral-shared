@@ -9,6 +9,7 @@ public class ReferralComparerTests : DtoComparerTestBase<ReferralDto, string>
         Id = 1,
         ReasonForSupport = "Reason For Support",
         EngageWithFamily = "Engage With Family",
+        ReasonForDecliningSupport = "Reason For Declining Support",
         RecipientDto = new RecipientDto
         {
             Id = 1,
@@ -25,13 +26,17 @@ public class ReferralComparerTests : DtoComparerTestBase<ReferralDto, string>
         ReferrerDto = new ReferrerDto
         {
             Id = 1,
+            Name = "Bob Referrer",
             EmailAddress = "Bob.Referrer@email.com",
+            PhoneNumber = "0122 865 278",
+            Role = "Role",
+            Team = "Team"
         },
         Status = new List<ReferralStatusDto>
                 {
                     new ReferralStatusDto
                     {
-                        Status = "Inital-Referral"
+                        Status = "New"
                     }
                 },
         ReferralServiceDto = new ReferralServiceDto
@@ -49,12 +54,13 @@ public class ReferralComparerTests : DtoComparerTestBase<ReferralDto, string>
 
     }, new ReferralDto
     {
-        Id = 1,
+        Id = 2,
         ReasonForSupport = "Reason For Support",
         EngageWithFamily = "Engage With Family",
+        ReasonForDecliningSupport = "Reason For Declining Support",
         RecipientDto = new RecipientDto
         {
-            Id = 1,
+            Id = 2,
             Name = "Joe Blogs",
             Email = "JoeBlog@email.com",
             Telephone = "078123456",
@@ -67,19 +73,23 @@ public class ReferralComparerTests : DtoComparerTestBase<ReferralDto, string>
         },
         ReferrerDto = new ReferrerDto
         {
-            Id = 1,
+            Id = 2,
+            Name = "Bob Referrer",
             EmailAddress = "Bob.Referrer@email.com",
+            PhoneNumber = "0122 865 278",
+            Role = "Role",
+            Team = "Team"
         },
         Status = new List<ReferralStatusDto>
                 {
                     new ReferralStatusDto
                     {
-                        Status = "Inital-Referral"
+                        Status = "New"
                     }
                 },
         ReferralServiceDto = new ReferralServiceDto
         {
-            Id = 1,
+            Id = 2,
             Name = "Service",
             Description = "Service Description",
             ReferralOrganisationDto = new ReferralOrganisationDto

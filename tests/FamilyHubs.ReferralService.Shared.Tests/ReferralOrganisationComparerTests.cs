@@ -12,7 +12,7 @@ public class ReferralOrganisationComparerTests : DtoComparerTestBase<ReferralOrg
 
     }, new ReferralOrganisationDto
     {
-        Id = 1,
+        Id = 2,
         Name = "Organisation",
         Description = "Organisation Description",
 

@@ -18,12 +18,12 @@ public class ReferralServiceComparerTests : DtoComparerTestBase<ReferralServiceD
 
     }, new ReferralServiceDto
     {
-        Id = 1,
+        Id = 2,
         Name = "Organisation",
         Description = "Service Description",
         ReferralOrganisationDto = new ReferralOrganisationDto
         {
-            Id = 1,
+            Id = 2,
             Name = "Organisation",
             Description = "Organisation Description",
         }
