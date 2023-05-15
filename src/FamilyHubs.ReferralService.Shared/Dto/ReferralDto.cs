@@ -1,18 +1,19 @@
 ﻿namespace FamilyHubs.ReferralService.Shared.Dto;
 
-
-
 public record ReferralDto : DtoBase<long>
 {
     public required string ReasonForSupport { get; set; }
     public required string EngageWithFamily { get; set; }
-    public required RecipientDto RecipientDto { get; set; }
-    public required ReferrerDto ReferrerDto { get; set; }
-    public required ReferralServiceDto ReferralServiceDto { get; set; }
     public string? ReasonForDecliningSupport { get; set; }
     public DateTime? Created { get; set; }
     public DateTime? LastModified { get; set; }
-    public ICollection<ReferralStatusDto> Status { get; set; } = new List<ReferralStatusDto>();
+
+    public required ServiceDto ServiceDto { get; set; }
+    public required StatusDto Status { get; set; }
+    public required RecipientDto RecipientDto { get; set; }
+    public required TeamDto TeamDto { get; set; }
+    public required UserDto UserDto { get; set; }
+
 
     public override int GetHashCode()
     {

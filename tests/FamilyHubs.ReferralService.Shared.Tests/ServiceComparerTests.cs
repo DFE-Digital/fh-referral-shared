@@ -2,26 +2,26 @@
 
 namespace FamilyHubs.ReferralService.Shared.Tests;
 
-public class ReferralServiceComparerTests : DtoComparerTestBase<ReferralServiceDto, string>
+public class ServiceComparerTests : DtoComparerTestBase<ServiceDto, string>
 {
-    public ReferralServiceComparerTests() : base(new ReferralServiceDto
+    public ServiceComparerTests() : base(new ServiceDto
     {
         Id = 1,
         Name = "Organisation",
         Description = "Service Description",
-        ReferralOrganisationDto = new ReferralOrganisationDto
+        ReferralOrganisationDto = new OrganisationDto
         {
             Id = 1,
             Name = "Organisation",
             Description = "Organisation Description",
         }
 
-    }, new ReferralServiceDto
+    }, new ServiceDto
     {
         Id = 2,
         Name = "Organisation",
         Description = "Service Description",
-        ReferralOrganisationDto = new ReferralOrganisationDto
+        ReferralOrganisationDto = new OrganisationDto
         {
             Id = 2,
             Name = "Organisation",

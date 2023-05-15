@@ -23,7 +23,13 @@ public class ReferralComparerTests : DtoComparerTestBase<ReferralDto, string>
             Country = "Country",
             PostCode = "B30 2TV"
         },
-        ReferrerDto = new ReferrerDto
+        TeamDto = new TeamDto
+        { 
+            Id = 1,
+            Name = "Team",
+            OrganisationId = 1,   
+        },
+        UserDto = new UserDto
         {
             Id = 1,
             Name = "Bob Referrer",
@@ -32,19 +38,17 @@ public class ReferralComparerTests : DtoComparerTestBase<ReferralDto, string>
             Role = "Role",
             Team = "Team"
         },
-        Status = new List<ReferralStatusDto>
-                {
-                    new ReferralStatusDto
-                    {
-                        Status = "New"
-                    }
-                },
-        ReferralServiceDto = new ReferralServiceDto
+        Status = new StatusDto
+        {
+            Id = 1,
+            Name = "New"
+        },
+        ServiceDto = new ServiceDto
         {
             Id = 1,
             Name = "Service",
             Description = "Service Description",
-            ReferralOrganisationDto = new ReferralOrganisationDto
+            ReferralOrganisationDto = new OrganisationDto
             {
                 Id = 1,
                 Name = "Organisation",
@@ -52,7 +56,8 @@ public class ReferralComparerTests : DtoComparerTestBase<ReferralDto, string>
             }
         }
 
-    }, new ReferralDto
+    }, 
+    new ReferralDto
     {
         Id = 2,
         ReasonForSupport = "Reason For Support",
@@ -71,7 +76,7 @@ public class ReferralComparerTests : DtoComparerTestBase<ReferralDto, string>
             Country = "Country",
             PostCode = "B30 2TV"
         },
-        ReferrerDto = new ReferrerDto
+        UserDto = new UserDto
         {
             Id = 2,
             Name = "Bob Referrer",
@@ -80,19 +85,23 @@ public class ReferralComparerTests : DtoComparerTestBase<ReferralDto, string>
             Role = "Role",
             Team = "Team"
         },
-        Status = new List<ReferralStatusDto>
-                {
-                    new ReferralStatusDto
-                    {
-                        Status = "New"
-                    }
-                },
-        ReferralServiceDto = new ReferralServiceDto
+        TeamDto = new TeamDto
+        {
+            Id = 1,
+            Name = "Team",
+            OrganisationId = 1,
+        },
+        Status = new StatusDto
+        {
+            Id = 1,
+            Name = "New"
+        },
+        ServiceDto = new ServiceDto
         {
             Id = 2,
             Name = "Service",
             Description = "Service Description",
-            ReferralOrganisationDto = new ReferralOrganisationDto
+            ReferralOrganisationDto = new OrganisationDto
             {
                 Id = 2,
                 Name = "Organisation",

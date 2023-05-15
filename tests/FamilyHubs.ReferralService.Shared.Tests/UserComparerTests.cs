@@ -2,9 +2,9 @@
 
 namespace FamilyHubs.ReferralService.Shared.Tests;
 
-public class ReferrerComparerTests : DtoComparerTestBase<ReferrerDto, string>
+public class UserComparerTests : DtoComparerTestBase<UserDto, string>
 {
-    public ReferrerComparerTests() : base(new ReferrerDto
+    public UserComparerTests() : base(new UserDto
     {
         Id = 1,
         Name = "Bob Referrer",
@@ -13,7 +13,7 @@ public class ReferrerComparerTests : DtoComparerTestBase<ReferrerDto, string>
         Role = "Role",
         Team = "Team"
 
-    }, new ReferrerDto
+    }, new UserDto
     {
         Id = 2,
         Name = "Bob Referrer",

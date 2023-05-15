@@ -1,4 +1,5 @@
-﻿// ReSharper disable PropertyCanBeMadeInitOnly.Global
+﻿
+// ReSharper disable PropertyCanBeMadeInitOnly.Global
 // ReSharper disable UnusedMember.Global
 // ReSharper disable UnusedAutoPropertyAccessor.Global
 // ReSharper disable ClassNeverInstantiated.Global
@@ -7,13 +8,14 @@
 #pragma warning disable CS8604
 
 
-
 namespace FamilyHubs.ReferralService.Shared.Dto;
 
-public record ReferralOrganisationDto : DtoBase<long>
+public record ServiceDto : DtoBase<long>
 {
     public required string Name { get; set; }
     public string? Description { get; set; }
+
+    public required OrganisationDto ReferralOrganisationDto { get; set; }
 
     public override int GetHashCode()
     {
@@ -24,7 +26,7 @@ public record ReferralOrganisationDto : DtoBase<long>
     }
 
 
-    public virtual bool Equals(ReferralOrganisationDto? other)
+    public virtual bool Equals(ServiceDto? other)
     {
         if (other is null) return false;
 
@@ -37,4 +39,3 @@ public record ReferralOrganisationDto : DtoBase<long>
             ;
     }
 }
-
