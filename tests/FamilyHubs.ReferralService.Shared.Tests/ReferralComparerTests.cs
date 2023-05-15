@@ -32,13 +32,13 @@ public class ReferralComparerTests : DtoComparerTestBase<ReferralDto, string>
             Role = "Role",
             Team = "Team"
         },
-        Status = new List<ReferralStatusDto>
-                {
-                    new ReferralStatusDto
-                    {
-                        Status = "New"
-                    }
-                },
+        Status = new ReferralStatusDto
+        {
+            Id = 1,     
+            Name = "New",
+            SortOrder = 1,
+                    
+        },
         ReferralServiceDto = new ReferralServiceDto
         {
             Id = 1,
@@ -80,13 +80,12 @@ public class ReferralComparerTests : DtoComparerTestBase<ReferralDto, string>
             Role = "Role",
             Team = "Team"
         },
-        Status = new List<ReferralStatusDto>
-                {
-                    new ReferralStatusDto
-                    {
-                        Status = "New"
-                    }
-                },
+        Status = new ReferralStatusDto
+        {
+            Id = 1,
+            Name = "New",
+            SortOrder = 1,
+        },
         ReferralServiceDto = new ReferralServiceDto
         {
             Id = 2,

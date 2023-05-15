@@ -2,12 +2,15 @@
 
 public record ReferralStatusDto : DtoBase<long>
 {
-    public string Status { get; set; } = default!;
+    public required string Name { get; set; }
+
+    public byte SortOrder { get; set; }
 
     public override int GetHashCode()
     {
         return
-            EqualityComparer<string>.Default.GetHashCode(Status) * -1521134295;
+            EqualityComparer<string>.Default.GetHashCode(Name) * -1521134295 +
+            EqualityComparer<byte>.Default.GetHashCode(SortOrder) * -1521134295;
     }
 
     public virtual bool Equals(ReferralStatusDto? other)
@@ -18,6 +21,7 @@ public record ReferralStatusDto : DtoBase<long>
             return true;
 
         return
-            EqualityComparer<string>.Default.Equals(Status, other.Status);
+            EqualityComparer<string>.Default.Equals(Name, other.Name) &&
+            EqualityComparer<byte>.Default.Equals(SortOrder, other.SortOrder);
     }
 }
