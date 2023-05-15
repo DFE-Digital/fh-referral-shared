@@ -15,7 +15,7 @@ public record ServiceDto : DtoBase<long>
     public required string Name { get; set; }
     public string? Description { get; set; }
 
-    public required OrganisationDto ReferralOrganisationDto { get; set; }
+    public required OrganisationDto OrganisationDto { get; set; }
 
     public override int GetHashCode()
     {
