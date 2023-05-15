@@ -35,8 +35,7 @@ public class ReferralComparerTests : DtoComparerTestBase<ReferralDto, string>
             Name = "Bob Referrer",
             EmailAddress = "Bob.Referrer@email.com",
             PhoneNumber = "0122 865 278",
-            Role = "Role",
-            Team = "Team"
+            OrganisationId = 1
         },
         Status = new StatusDto
         {
@@ -82,8 +81,7 @@ public class ReferralComparerTests : DtoComparerTestBase<ReferralDto, string>
             Name = "Bob Referrer",
             EmailAddress = "Bob.Referrer@email.com",
             PhoneNumber = "0122 865 278",
-            Role = "Role",
-            Team = "Team"
+            OrganisationId = 1,
         },
         TeamDto = new TeamDto
         {

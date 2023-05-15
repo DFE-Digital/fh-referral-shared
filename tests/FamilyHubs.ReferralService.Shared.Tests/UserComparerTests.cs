@@ -10,8 +10,7 @@ public class UserComparerTests : DtoComparerTestBase<UserDto, string>
         Name = "Bob Referrer",
         EmailAddress = "Bob.Referrer@email.com",
         PhoneNumber = "0122 865 278",
-        Role = "Role",
-        Team = "Team"
+        OrganisationId = 1
 
     }, new UserDto
     {
@@ -19,8 +18,7 @@ public class UserComparerTests : DtoComparerTestBase<UserDto, string>
         Name = "Bob Referrer",
         EmailAddress = "Bob.Referrer@email.com",
         PhoneNumber = "0122 865 278",
-        Role = "Role",
-        Team = "Team"
+        OrganisationId = 1
 
 
     }, dto => dto.EmailAddress)
