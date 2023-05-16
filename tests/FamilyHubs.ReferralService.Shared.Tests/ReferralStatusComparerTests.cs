@@ -7,15 +7,17 @@ public class ReferralStatusComparerTests : DtoComparerTestBase<ReferralStatusDto
     public ReferralStatusComparerTests() : base(new ReferralStatusDto
     {
         Id = 1,
-        Status = "New"
+        Name = "New",
+        SortOrder = 1
        
     }, new ReferralStatusDto
     {
         Id = 1,
-        Status = "New"
+        Name = "New",
+        SortOrder = 1
         
 
-    }, dto => dto.Status)
+    }, dto => dto.Name)
     {
 
     }   
