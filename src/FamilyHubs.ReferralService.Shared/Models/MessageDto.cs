@@ -18,6 +18,13 @@ public record MessageDto
             EqualityComparer<string?>.Default.GetHashCode(RecipientEmail) * -1521134295 +
             EqualityComparer<string?>.Default.GetHashCode(TemplateId) * -1521134295;
 
+        foreach (var token in TemplateTokens)
+        {
+            result +=
+            EqualityComparer<string?>.Default.GetHashCode(token.Key) * -1521134295 +
+            EqualityComparer<string?>.Default.GetHashCode(token.Value) * -1521134295;
+        }
+
         return result;
     }
 
