@@ -4,7 +4,9 @@ public enum ReferralOrderBy
 {
     NotSet,
     DateSent,
+    DateUpdated,
     Status,
     RecipientName,
-    Team
+    Team,
+    ServiceName
 }
