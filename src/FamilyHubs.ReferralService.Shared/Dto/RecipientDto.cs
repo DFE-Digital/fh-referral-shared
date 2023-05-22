@@ -17,7 +17,7 @@ public record RecipientDto : DtoBase<long>
     public string? AddressLine1 { get; set; }
     public string? AddressLine2 { get; set; }
     public string? TownOrCity { get; set; }
-    public string? Country { get; set; }
+    public string? County { get; set; }
     public string? PostCode { get; set; }
 
     public override int GetHashCode()
@@ -30,7 +30,7 @@ public record RecipientDto : DtoBase<long>
             EqualityComparer<string?>.Default.GetHashCode(AddressLine1) * -1521134295 +
             EqualityComparer<string?>.Default.GetHashCode(AddressLine2) * -1521134295 +
             EqualityComparer<string?>.Default.GetHashCode(TownOrCity) * -1521134295 +
-            EqualityComparer<string?>.Default.GetHashCode(Country) * -1521134295 +
+            EqualityComparer<string?>.Default.GetHashCode(County) * -1521134295 +
             EqualityComparer<string?>.Default.GetHashCode(PostCode) * -1521134295
             ;
     }
@@ -51,7 +51,7 @@ public record RecipientDto : DtoBase<long>
             EqualityComparer<string?>.Default.Equals(AddressLine1, other.AddressLine1) &&
             EqualityComparer<string?>.Default.Equals(AddressLine2, other.AddressLine2) &&
             EqualityComparer<string?>.Default.Equals(TownOrCity, other.TownOrCity) &&
-            EqualityComparer<string?>.Default.Equals(Country, other.Country) &&
+            EqualityComparer<string?>.Default.Equals(County, other.County) &&
             EqualityComparer<string?>.Default.Equals(PostCode, other.PostCode)
             ;
     }

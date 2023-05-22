@@ -20,7 +20,7 @@ public class ReferralComparerTests : DtoComparerTestBase<ReferralDto, string>
             AddressLine1 = "Address Line 1",
             AddressLine2 = "Address Line 2",
             TownOrCity = "Town or City",
-            Country = "Country",
+            County = "Country",
             PostCode = "B30 2TV"
         },
         ReferrerDto = new ReferrerDto
@@ -68,7 +68,7 @@ public class ReferralComparerTests : DtoComparerTestBase<ReferralDto, string>
             AddressLine1 = "Address Line 1",
             AddressLine2 = "Address Line 2",
             TownOrCity = "Town or City",
-            Country = "Country",
+            County = "Country",
             PostCode = "B30 2TV"
         },
         ReferrerDto = new ReferrerDto
