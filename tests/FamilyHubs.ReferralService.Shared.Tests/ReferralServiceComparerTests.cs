@@ -9,6 +9,7 @@ public class ReferralServiceComparerTests : DtoComparerTestBase<ReferralServiceD
         Id = 1,
         Name = "Organisation",
         Description = "Service Description",
+        Url = "www.Service.com",
         ReferralOrganisationDto = new ReferralOrganisationDto
         {
             Id = 1,
@@ -21,6 +22,7 @@ public class ReferralServiceComparerTests : DtoComparerTestBase<ReferralServiceD
         Id = 2,
         Name = "Organisation",
         Description = "Service Description",
+        Url = "www.Service.com",
         ReferralOrganisationDto = new ReferralOrganisationDto
         {
             Id = 2,
