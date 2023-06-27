@@ -10,6 +10,7 @@ public class ReferralComparerTests : DtoComparerTestBase<ReferralDto, string>
         ReasonForSupport = "Reason For Support",
         EngageWithFamily = "Engage With Family",
         ReasonForDecliningSupport = "Reason For Declining Support",
+        ReferrerTelephone = "01234567890",
         RecipientDto = new RecipientDto
         {
             Id = 1,
@@ -58,6 +59,7 @@ public class ReferralComparerTests : DtoComparerTestBase<ReferralDto, string>
         ReasonForSupport = "Reason For Support",
         EngageWithFamily = "Engage With Family",
         ReasonForDecliningSupport = "Reason For Declining Support",
+        ReferrerTelephone = "01234567890",
         RecipientDto = new RecipientDto
         {
             Id = 2,
