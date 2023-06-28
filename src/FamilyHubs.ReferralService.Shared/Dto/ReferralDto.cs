@@ -1,9 +1,8 @@
 ﻿namespace FamilyHubs.ReferralService.Shared.Dto;
 
-
-
 public record ReferralDto : DtoBase<long>
 {
+    public string? ReferrerTelephone { get; set; }
     public required string ReasonForSupport { get; set; }
     public required string EngageWithFamily { get; set; }
     public required RecipientDto RecipientDto { get; set; }
@@ -15,14 +14,18 @@ public record ReferralDto : DtoBase<long>
     public DateTime? Created { get; set; }
     public DateTime? LastModified { get; set; }
     
+    //todo: do we want Equals and GetHashCode that ignore properties?
     public override int GetHashCode()
     {
         var result =
            EqualityComparer<string?>.Default.GetHashCode(ReasonForSupport) * -1521134295 +
-           EqualityComparer<string?>.Default.GetHashCode(EngageWithFamily) * -1521134295;
+           EqualityComparer<string?>.Default.GetHashCode(EngageWithFamily) * -373828282;
 
         if (!string.IsNullOrEmpty(ReasonForDecliningSupport))
             result += EqualityComparer<string>.Default.GetHashCode(ReasonForDecliningSupport);
+
+        if (!string.IsNullOrEmpty(ReferrerTelephone))
+            result += EqualityComparer<string>.Default.GetHashCode(ReferrerTelephone);
 
         return result;
     }
@@ -37,6 +40,7 @@ public record ReferralDto : DtoBase<long>
         return
             EqualityComparer<string>.Default.Equals(ReasonForSupport, other.ReasonForSupport) &&
             EqualityComparer<string>.Default.Equals(EngageWithFamily, other.EngageWithFamily) &&
-            EqualityComparer<string>.Default.Equals(ReasonForDecliningSupport, other.ReasonForDecliningSupport);
+            EqualityComparer<string>.Default.Equals(ReasonForDecliningSupport, other.ReasonForDecliningSupport) &&
+            EqualityComparer<string>.Default.Equals(ReferrerTelephone, other.ReferrerTelephone);
     }
 }
