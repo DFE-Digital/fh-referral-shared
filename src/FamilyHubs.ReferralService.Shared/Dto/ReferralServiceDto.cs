@@ -17,7 +17,7 @@ public record ReferralServiceDto : DtoBase<long>
 
     public string? Url { get; set; }
 
-    public required ReferralOrganisationDto ReferralOrganisationDto { get; set; }
+    public required OrganisationDto OrganisationDto { get; set; }
 
     public override int GetHashCode()
     {

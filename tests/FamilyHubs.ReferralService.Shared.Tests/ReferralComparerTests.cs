@@ -24,7 +24,7 @@ public class ReferralComparerTests : DtoComparerTestBase<ReferralDto, string>
             County = "Country",
             PostCode = "B30 2TV"
         },
-        ReferrerDto = new ReferrerDto
+        ReferrerDto = new ReferralUserAccountDto
         {
             Id = 1,
             Name = "Bob Referrer",
@@ -45,7 +45,7 @@ public class ReferralComparerTests : DtoComparerTestBase<ReferralDto, string>
             Id = 1,
             Name = "Service",
             Description = "Service Description",
-            ReferralOrganisationDto = new ReferralOrganisationDto
+            OrganisationDto = new OrganisationDto
             {
                 Id = 1,
                 Name = "Organisation",
@@ -73,7 +73,7 @@ public class ReferralComparerTests : DtoComparerTestBase<ReferralDto, string>
             County = "Country",
             PostCode = "B30 2TV"
         },
-        ReferrerDto = new ReferrerDto
+        ReferrerDto = new ReferralUserAccountDto
         {
             Id = 2,
             Name = "Bob Referrer",
@@ -93,7 +93,7 @@ public class ReferralComparerTests : DtoComparerTestBase<ReferralDto, string>
             Id = 2,
             Name = "Service",
             Description = "Service Description",
-            ReferralOrganisationDto = new ReferralOrganisationDto
+            OrganisationDto = new OrganisationDto
             {
                 Id = 2,
                 Name = "Organisation",
