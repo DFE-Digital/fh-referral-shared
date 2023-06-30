@@ -2,7 +2,7 @@
 
 namespace FamilyHubs.ReferralService.Shared.Dto;
 
-public record ReferrerDto : DtoBase<long>
+public record ReferralUserAccountDto : DtoBase<long>
 {
     public required string EmailAddress { get; set; }
     public string? Name { get; set; }
@@ -28,7 +28,7 @@ public record ReferrerDto : DtoBase<long>
        
     }
 
-    public virtual bool Equals(ReferrerDto? other)
+    public virtual bool Equals(ReferralUserAccountDto? other)
     {
         if (other is null) return false;
 

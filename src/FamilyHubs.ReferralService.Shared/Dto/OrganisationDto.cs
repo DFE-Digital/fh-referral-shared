@@ -10,7 +10,7 @@
 
 namespace FamilyHubs.ReferralService.Shared.Dto;
 
-public record ReferralOrganisationDto : DtoBase<long>
+public record OrganisationDto : DtoBase<long>
 {
     public required string Name { get; set; }
     public string? Description { get; set; }
@@ -24,7 +24,7 @@ public record ReferralOrganisationDto : DtoBase<long>
     }
 
 
-    public virtual bool Equals(ReferralOrganisationDto? other)
+    public virtual bool Equals(OrganisationDto? other)
     {
         if (other is null) return false;
 
