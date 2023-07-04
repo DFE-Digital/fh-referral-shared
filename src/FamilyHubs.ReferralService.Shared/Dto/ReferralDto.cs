@@ -18,14 +18,12 @@ public record ReferralDto : DtoBase<long>
     public override int GetHashCode()
     {
         var result =
+           EqualityComparer<string?>.Default.GetHashCode(ReferrerTelephone!) * -1521134295 +
            EqualityComparer<string?>.Default.GetHashCode(ReasonForSupport) * -1521134295 +
            EqualityComparer<string?>.Default.GetHashCode(EngageWithFamily) * -373828282;
 
         if (!string.IsNullOrEmpty(ReasonForDecliningSupport))
             result += EqualityComparer<string>.Default.GetHashCode(ReasonForDecliningSupport);
-
-        if (!string.IsNullOrEmpty(ReferrerTelephone))
-            result += EqualityComparer<string>.Default.GetHashCode(ReferrerTelephone);
 
         return result;
     }

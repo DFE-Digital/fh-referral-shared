@@ -12,12 +12,14 @@ namespace FamilyHubs.ReferralService.Shared.Dto;
 
 public record OrganisationDto : DtoBase<long>
 {
+    public long? ReferralServiceId { get; set; }
     public required string Name { get; set; }
     public string? Description { get; set; }
 
     public override int GetHashCode()
     {
         return
+            EqualityComparer<long?>.Default.GetHashCode(ReferralServiceId!) * -1521134295 +
             EqualityComparer<string>.Default.GetHashCode(Name) * -1521134295 +
             EqualityComparer<string?>.Default.GetHashCode(Description) * -1521134295
             ;
@@ -32,6 +34,7 @@ public record OrganisationDto : DtoBase<long>
             return true;
 
         return
+            EqualityComparer<long?>.Default.Equals(ReferralServiceId, other.ReferralServiceId) &&
             EqualityComparer<string>.Default.Equals(Name, other.Name) &&
             EqualityComparer<string?>.Default.Equals(Description, other.Description)
             ;

@@ -10,7 +10,7 @@ public class ReferralUserAccountComparerTests : DtoComparerTestBase<ReferralUser
         Name = "Bob Referrer",
         EmailAddress = "Bob.Referrer@email.com",
         PhoneNumber = "0122 865 278",
-        Role = "Role",
+        UserAccountRoles = new List<UserAccountRoleDto>(),
         Team = "Team"
 
     }, new ReferralUserAccountDto
@@ -19,7 +19,7 @@ public class ReferralUserAccountComparerTests : DtoComparerTestBase<ReferralUser
         Name = "Bob Referrer",
         EmailAddress = "Bob.Referrer@email.com",
         PhoneNumber = "0122 865 278",
-        Role = "Role",
+        UserAccountRoles = new List<UserAccountRoleDto>(),
         Team = "Team"
 
 
