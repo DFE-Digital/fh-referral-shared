@@ -6,7 +6,7 @@ public record ReferralDto : DtoBase<long>
     public required string ReasonForSupport { get; set; }
     public required string EngageWithFamily { get; set; }
     public required RecipientDto RecipientDto { get; set; }
-    public required ReferralUserAccountDto ReferralUserAccountDto { get; set; }
+    public required UserAccountDto ReferralUserAccountDto { get; set; }
     public required ReferralServiceDto ReferralServiceDto { get; set; }
     public required ReferralStatusDto Status { get; set; }
 

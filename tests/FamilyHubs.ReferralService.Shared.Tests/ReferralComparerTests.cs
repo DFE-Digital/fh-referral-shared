@@ -24,7 +24,7 @@ public class ReferralComparerTests : DtoComparerTestBase<ReferralDto, string, lo
             County = "Country",
             PostCode = "B30 2TV"
         },
-        ReferralUserAccountDto = new ReferralUserAccountDto
+        ReferralUserAccountDto = new UserAccountDto
         {
             Id = 1,
             Name = "Bob Referrer",
@@ -73,7 +73,7 @@ public class ReferralComparerTests : DtoComparerTestBase<ReferralDto, string, lo
             County = "Country",
             PostCode = "B30 2TV"
         },
-        ReferralUserAccountDto = new ReferralUserAccountDto
+        ReferralUserAccountDto = new UserAccountDto
         {
             Id = 2,
             Name = "Bob Referrer",
