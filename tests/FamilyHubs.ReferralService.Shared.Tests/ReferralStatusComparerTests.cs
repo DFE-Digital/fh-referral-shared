@@ -2,7 +2,8 @@
 
 namespace FamilyHubs.ReferralService.Shared.Tests;
 
-public class ReferralStatusComparerTests : DtoComparerTestBase<ReferralStatusDto, string>
+
+public class ReferralStatusComparerTests : DtoComparerTestBase<ReferralStatusDto, string, byte>
 {
     public ReferralStatusComparerTests() : base(new ReferralStatusDto
     {
@@ -12,7 +13,7 @@ public class ReferralStatusComparerTests : DtoComparerTestBase<ReferralStatusDto
        
     }, new ReferralStatusDto
     {
-        Id = 1,
+        Id = 2,
         Name = "New",
         SortOrder = 1
         

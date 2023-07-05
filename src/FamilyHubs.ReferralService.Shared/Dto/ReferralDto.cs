@@ -6,7 +6,7 @@ public record ReferralDto : DtoBase<long>
     public required string ReasonForSupport { get; set; }
     public required string EngageWithFamily { get; set; }
     public required RecipientDto RecipientDto { get; set; }
-    public required ReferralUserAccountDto ReferrerDto { get; set; }
+    public required UserAccountDto ReferralUserAccountDto { get; set; }
     public required ReferralServiceDto ReferralServiceDto { get; set; }
     public required ReferralStatusDto Status { get; set; }
 
@@ -18,14 +18,12 @@ public record ReferralDto : DtoBase<long>
     public override int GetHashCode()
     {
         var result =
+           EqualityComparer<string?>.Default.GetHashCode(ReferrerTelephone!) * -1521134295 +
            EqualityComparer<string?>.Default.GetHashCode(ReasonForSupport) * -1521134295 +
            EqualityComparer<string?>.Default.GetHashCode(EngageWithFamily) * -373828282;
 
         if (!string.IsNullOrEmpty(ReasonForDecliningSupport))
             result += EqualityComparer<string>.Default.GetHashCode(ReasonForDecliningSupport);
-
-        if (!string.IsNullOrEmpty(ReferrerTelephone))
-            result += EqualityComparer<string>.Default.GetHashCode(ReferrerTelephone);
 
         return result;
     }

@@ -5,7 +5,7 @@ using System.Reflection;
 
 namespace FamilyHubs.ReferralService.Shared.Tests;
 
-public abstract class DtoComparerTestBase<T, TPropertyType> where T : DtoBase<long>
+public abstract class DtoComparerTestBase<T, TPropertyType, TBaseType> where T : DtoBase<TBaseType>
 {
     private readonly T _sut;
     private T _other;
@@ -27,8 +27,8 @@ public abstract class DtoComparerTestBase<T, TPropertyType> where T : DtoBase<lo
     [Fact]
     public void WhenComparingTwoObjectsIgnorePrimaryAndForeignKeyThenReturnsTrue()
     {
-        _sut.Id = 1;
-        _other.Id = 2;
+        _sut.Id = (TBaseType)Convert.ChangeType(1, typeof(TBaseType));
+        _other.Id = (TBaseType)Convert.ChangeType(2, typeof(TBaseType));
         _sut.Equals(_other).Should().BeTrue();
     }
 

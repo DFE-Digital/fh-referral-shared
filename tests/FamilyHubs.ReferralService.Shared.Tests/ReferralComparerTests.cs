@@ -2,7 +2,7 @@
 
 namespace FamilyHubs.ReferralService.Shared.Tests;
 
-public class ReferralComparerTests : DtoComparerTestBase<ReferralDto, string>
+public class ReferralComparerTests : DtoComparerTestBase<ReferralDto, string, long>
 {
     public ReferralComparerTests() : base(new ReferralDto
     {
@@ -24,13 +24,13 @@ public class ReferralComparerTests : DtoComparerTestBase<ReferralDto, string>
             County = "Country",
             PostCode = "B30 2TV"
         },
-        ReferrerDto = new ReferralUserAccountDto
+        ReferralUserAccountDto = new UserAccountDto
         {
             Id = 1,
             Name = "Bob Referrer",
             EmailAddress = "Bob.Referrer@email.com",
             PhoneNumber = "0122 865 278",
-            Role = "Role",
+            UserAccountRoles = new List<UserAccountRoleDto>(),
             Team = "Team"
         },
         Status = new ReferralStatusDto
@@ -73,13 +73,13 @@ public class ReferralComparerTests : DtoComparerTestBase<ReferralDto, string>
             County = "Country",
             PostCode = "B30 2TV"
         },
-        ReferrerDto = new ReferralUserAccountDto
+        ReferralUserAccountDto = new UserAccountDto
         {
             Id = 2,
             Name = "Bob Referrer",
             EmailAddress = "Bob.Referrer@email.com",
             PhoneNumber = "0122 865 278",
-            Role = "Role",
+            UserAccountRoles = new List<UserAccountRoleDto>(),
             Team = "Team"
         },
         Status = new ReferralStatusDto
