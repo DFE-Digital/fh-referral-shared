@@ -2,7 +2,7 @@
 
 namespace FamilyHubs.ReferralService.Shared.Tests;
 
-public class ReferralUserAccountComparerTests : DtoComparerTestBase<ReferralUserAccountDto, string>
+public class ReferralUserAccountComparerTests : DtoComparerTestBase<ReferralUserAccountDto, string, long>
 {
     public ReferralUserAccountComparerTests() : base(new ReferralUserAccountDto
     {

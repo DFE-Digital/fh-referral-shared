@@ -1,6 +1,6 @@
 ﻿namespace FamilyHubs.ReferralService.Shared.Dto;
 
-public record ReferralStatusDto : DtoBase<long>
+public record ReferralStatusDto : DtoBase<byte>
 {
     public required string Name { get; set; }
 

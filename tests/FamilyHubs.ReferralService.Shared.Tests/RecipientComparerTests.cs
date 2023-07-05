@@ -2,7 +2,7 @@ using FamilyHubs.ReferralService.Shared.Dto;
 
 namespace FamilyHubs.ReferralService.Shared.Tests;
 
-public class RecipientComparerTests : DtoComparerTestBase<RecipientDto, string>
+public class RecipientComparerTests : DtoComparerTestBase<RecipientDto, string, long>
 {
     public RecipientComparerTests() : base(new RecipientDto
     {
