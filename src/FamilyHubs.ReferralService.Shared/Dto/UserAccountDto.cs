@@ -9,7 +9,7 @@ public record UserAccountDto : DtoBase<long>
     public string? Team { get; set; }
     public IList<UserAccountRoleDto>? UserAccountRoles { get; set; }
     public IList<UserAccountServiceDto>? ServiceUserAccounts { get; set; }
-    public IList<UserAccountOrganisationDto>? OrganisationUserAccountDtos { get; set; }
+    public IList<UserAccountOrganisationDto>? OrganisationUserAccounts { get; set; }
 
     public override int GetHashCode()
     {
