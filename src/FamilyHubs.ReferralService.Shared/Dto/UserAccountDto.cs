@@ -7,6 +7,7 @@ public record UserAccountDto : DtoBase<long>
     public string? Name { get; set; }
     public string? PhoneNumber { get; set; }
     public string? Team { get; set; }
+    public IList<UserAccountRoleDto>? UserAccountRoles { get; set; }
     public IList<UserAccountServiceDto>? ServiceUserAccounts { get; set; }
     public IList<UserAccountOrganisationDto>? OrganisationUserAccountDtos { get; set; }
 

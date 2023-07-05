@@ -2,10 +2,10 @@
 
 public record UserAccountRoleDto : DtoBase<long>
 {
-    public long UserAccountId { get { return UserAccount.Id; } }
+    public long UserAccountId { get { return (UserAccount != null) ? UserAccount.Id : 0; } }
     public virtual required UserAccountDto UserAccount { get; set; }
 
-    public long RoleId { get { return Role.Id; } }
+    public byte RoleId { get { return (Role != null) ? Role.Id : (byte)0; } }
     public required RoleDto Role { get; set; }
 
     public override int GetHashCode()

@@ -2,6 +2,9 @@
 
 public class UserAccountServiceDto
 {
-    public required ReferralServiceDto ReferralService { get; set; }
+    public long UserAccountId { get { return (UserAccount != null) ? UserAccount.Id : 0; } }
     public required UserAccountDto UserAccount { get; set; }
+
+    public long ReferralServiceId { get { return (ReferralService != null) ? ReferralService.Id : 0; } }
+    public required ReferralServiceDto ReferralService { get; set; }
 }
