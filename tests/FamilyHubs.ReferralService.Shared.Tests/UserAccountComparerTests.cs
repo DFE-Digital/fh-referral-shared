@@ -11,7 +11,7 @@ public class UserAccountComparerTests : DtoComparerTestBase<UserAccountDto, stri
         EmailAddress = "Bob.Referrer@email.com",
         PhoneNumber = "0122 865 278",
         Team = "Team",
-        OrganisationUserAccountDtos = new List<UserAccountOrganisationDto>()
+        OrganisationUserAccounts = new List<UserAccountOrganisationDto>()
 
     }, new UserAccountDto
     {
@@ -20,7 +20,7 @@ public class UserAccountComparerTests : DtoComparerTestBase<UserAccountDto, stri
         EmailAddress = "Bob.Referrer@email.com",
         PhoneNumber = "0122 865 278",
         Team = "Team",
-        OrganisationUserAccountDtos = new List<UserAccountOrganisationDto>()
+        OrganisationUserAccounts = new List<UserAccountOrganisationDto>()
 
 
     }, dto => dto.EmailAddress)
