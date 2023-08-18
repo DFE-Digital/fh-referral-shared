@@ -12,7 +12,7 @@ namespace FamilyHubs.ReferralService.Shared.Dto;
 
 public record ReferralServiceDto : DtoBase<long>
 {
-    public required string Name { get; set; }
+    public string? Name { get; set; }
     public string? Description { get; set; }
 
     public string? Url { get; set; }

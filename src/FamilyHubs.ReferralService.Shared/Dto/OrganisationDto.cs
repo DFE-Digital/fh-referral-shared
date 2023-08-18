@@ -13,7 +13,7 @@ namespace FamilyHubs.ReferralService.Shared.Dto;
 public record OrganisationDto : DtoBase<long>
 {
     public long? ReferralServiceId { get; set; }
-    public required string Name { get; set; }
+    public string? Name { get; set; }
     public string? Description { get; set; }
 
     public override int GetHashCode()
