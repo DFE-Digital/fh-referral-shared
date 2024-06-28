@@ -1,4 +1,5 @@
-﻿
+﻿using System.Net;
+
 namespace FamilyHubs.ReferralService.Shared.Dto;
 
-public record UpdateConnectionRequestsSentMetricDto(byte HttpResponseCode, long ConnectionRequestId);
+public record UpdateConnectionRequestsSentMetricDto(HttpStatusCode HttpStatusCode, long ConnectionRequestId);
